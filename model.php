@@ -64,7 +64,7 @@
 
           $mysqli->real_query($sqlRequest);
 
-          return [true, ''];
+          return [true, 'task added successfully!'];
 
         } else {
           return [false, 'invalid email'];

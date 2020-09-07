@@ -24,6 +24,8 @@ if ((isset($_POST["submitLogin"])) || ((isset($_GET["action"])) && ($_GET["actio
 } elseif ((isset($_POST["submitTaskBtn"])) && (isset($_POST["edit"])) && ($_POST["edit"] == 0)) {
   $tasked=AddTask($task, $email, $name, $mysqli);
   if ($tasked[0]) {
+    $_SESSION["msg"] = $tasked[1];
+    //echo $tasked[1];
     header("Location: /beejee");
   } else {
     $_SESSION["error"] = $tasked[1];
