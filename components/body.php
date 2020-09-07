@@ -1,5 +1,14 @@
 <main role="main" class="container-sm p-0">
 
+  <?php session_start();
+  print_r ($_SESSION["msg"]);
+  // if (isset($_SESSION["error"]) {
+  //         echo $_SESSION["error"];
+  //         unset($_SESSION["error"]);
+  //       }
+  unset($_SESSION["msg"]);
+  ?>
+
   <div class="container d-flex justify-content-between mt-5 p-0">
     <div class="dropdown">
       <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
